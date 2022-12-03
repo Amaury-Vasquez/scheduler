@@ -1,0 +1,14 @@
+@import '../animation';
+
+div.layout {
+  @include fadeIn();
+  width: 100vw;
+  height: 100vh;
+  background: var(--white);
+}
+
+div.content {
+  min-height: calc(100vh - 100px);
+  height: auto;
+  width: 100%;
+}

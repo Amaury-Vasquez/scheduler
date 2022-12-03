@@ -1,0 +1,110 @@
+@import '../mixins';
+@import '../animation';
+
+button.userButton {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+
+  @include actionable();
+}
+
+div.menu {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  height: auto;
+  width: min(400px, 100vw);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 10px;
+  background: var(--white);
+  @include shadow();
+  @include fadeIn($time: 0.5s);
+}
+
+@keyframes fadeToTop {
+  from {
+    transform: scale(1);
+    --webkit-transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    filter: blur(15px);
+    transform: scale(0);
+    --webkit-transform: scale(0);
+    top: 0;
+  }
+}
+
+div.fadeMenu {
+  animation: 0.3s fadeToTop ease;
+  transform-origin: top right;
+}
+
+nav.auth {
+  display: flex;
+  width: 100%;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: auto;
+}
+
+a.authLink {
+  width: 150px;
+  height: 50px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  background: var(--purple);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+
+  &:hover,
+  &:focus-visible {
+    transition: 0.2s;
+    opacity: 0.8;
+    outline: none;
+  }
+}
+
+span.userNotAuth {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 100%;
+
+  svg {
+    color: var(--purple);
+    font-size: 1.5rem;
+  }
+}
+
+span.message {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--black-font);
+  line-height: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}

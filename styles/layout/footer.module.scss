@@ -1,0 +1,16 @@
+footer.footer {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lille);
+
+  span {
+    color: var(--white);
+    font-weight: 400;
+  }
+}
