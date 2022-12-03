@@ -1,0 +1,40 @@
+$background: rgba(255, 255, 255, 0.2);
+
+@mixin shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+@mixin siderButton($color: $background, $borderColor: #ddd) {
+  border-radius: 100%;
+  display: flex;
+  border: none;
+  background: transparent;
+  @include actionable($color, $borderColor);
+}
+
+@mixin actionable($color: $background, $borderColor: #ddd) {
+  &:hover,
+  &:focus-visible {
+    background: $color;
+    outline: none;
+    transition: 0.2s;
+  }
+
+  &:focus-visible {
+    border: 1px solid $borderColor;
+  }
+}
+
+@mixin templateButton($background: var(--purple), $color: var(--white)) {
+  width: auto;
+  padding: 0px 30px;
+  height: 50px;
+  background: $background;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: $color;
+  font-weight: 600;
+}

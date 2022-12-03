@@ -1,0 +1,29 @@
+@keyframes fadeInKeyframes {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@mixin fadeIn($time: 1s) {
+  animation: $time fadeInKeyframes ease;
+}
+
+@keyframes fadeOutKeyframes {
+  from {
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+
+@mixin fadeOut($time: 0.5s) {
+  animation: $time fadeOutKeyframes ease;
+}
