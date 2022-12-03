@@ -1,0 +1,47 @@
+@import './mixins';
+
+div.notFoundContent {
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article.notFoundInfo {
+  height: auto;
+  width: min(400px, 100%);
+  font-size: 1rem;
+  @include shadow();
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 10px;
+
+  h2 {
+    color: var(--purple);
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 2em;
+  }
+
+  span {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      font-size: 2rem;
+      color: var(--purple);
+    }
+  }
+}
+
+a.homeButton {
+  @include templateButton();
+  margin: 0 auto;
+}
