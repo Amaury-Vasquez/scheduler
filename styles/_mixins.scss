@@ -38,3 +38,13 @@ $background: rgba(255, 255, 255, 0.2);
   color: $color;
   font-weight: 600;
 }
+
+@mixin headerButton {
+  height: 100%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+}
