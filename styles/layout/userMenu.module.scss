@@ -1,6 +1,10 @@
 @import '../mixins';
 @import '../animation';
 
+div.buttonWrapper {
+  @include headerButton();
+}
+
 button.userButton {
   height: 100%;
   width: 100%;
