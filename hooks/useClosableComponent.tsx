@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 export const useClosableComponent = (
   callback: Function,
-  time: number = 200
+  time: number = 200,
+  args?: any
 ) => {
   const [willFade, setFade] = useState(false);
 
@@ -10,7 +11,8 @@ export const useClosableComponent = (
     setFade(true);
     setTimeout(() => {
       setFade(false);
-      callback();
+      console.log(args);
+      callback(args);
     }, time);
   };
 
