@@ -9,33 +9,32 @@ header.header {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
-div.buttonWrapper {
-  height: 100%;
-  width: 50px;
+ul.userOptions {
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 5px;
+  justify-content: center;
+  height: 100%;
+  width: auto;
 }
 
 button.menuButton {
   @include fadeIn($time: 0.5s);
+  @include headerButton();
   @include siderButton();
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 0 10px;
-  gap: 5px;
   height: 100%;
   width: 100%;
 
-  div {
-    width: 100%;
-    height: 1.5px;
-    background: var(--white);
-    border-radius: 3px;
+  svg {
+    font-size: 1.5rem;
+    color: var(--white);
   }
 }
 
