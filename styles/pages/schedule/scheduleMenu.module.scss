@@ -1,0 +1,41 @@
+@import '../../mixins';
+
+div.menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  &:last-child {
+    border-right: none;
+  }
+}
+
+button.optionButton {
+  height: 50px;
+  color: var(--purple);
+  transition: all 0.2s;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1rem;
+  @include shadow();
+  border-radius: 5px;
+  font-style: italic;
+
+  svg {
+    color: inherit;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--purple-blue);
+  }
+}

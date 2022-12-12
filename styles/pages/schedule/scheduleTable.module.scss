@@ -1,0 +1,49 @@
+div.emptySchedule {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    border: 1px solid #cfcfcf;
+    border-radius: 30px;
+    background: var(--purple);
+  }
+}
+
+span.advertisement {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+span.create {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  svg {
+    font-size: 4rem;
+    color: var(--white);
+  }
+
+  button {
+    color: var(--purple);
+    background: var(--white);
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+}
