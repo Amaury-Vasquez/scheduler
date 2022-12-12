@@ -1,4 +1,6 @@
-import { UserMenu } from 'components/layout/UserMenu';
+import { HiOutlineMenu } from 'react-icons/hi';
+
+import { UserOptions } from './UserOptions';
 import styles from 'styles/layout/header.module.scss';
 
 interface HeaderProps {
@@ -6,7 +8,7 @@ interface HeaderProps {
   showButton: boolean;
 }
 
-const { header, buttonWrapper, menuButton, hide, userButton } = styles;
+const { header, buttonWrapper, menuButton, hide } = styles;
 
 export const Header = ({ callback, showButton }: HeaderProps) => {
   return (
@@ -17,14 +19,10 @@ export const Header = ({ callback, showButton }: HeaderProps) => {
           disabled={!showButton}
           onClick={() => callback()}
         >
-          <div />
-          <div />
-          <div />
+          <HiOutlineMenu />
         </button>
       </div>
-      <div className={buttonWrapper}>
-        <UserMenu />
-      </div>
+      <UserOptions />
     </header>
   );
 };
