@@ -4,7 +4,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 
 import styles from 'styles/layout/sider.module.scss';
 import { useClosableComponent } from 'hooks/useClosableComponent';
-import { useNavigationItems } from 'hooks/useNavigationItems';
+import { useFeatures } from 'hooks/useFeatures';
 
 interface SiderProps {
   callback: (e: MouseEvent<HTMLButtonElement>) => void;
@@ -23,7 +23,7 @@ const {
 
 export const Sider = ({ callback, isActive }: SiderProps) => {
   const { onClose, willFade } = useClosableComponent(callback);
-  const { navigationItems } = useNavigationItems();
+  const { features, logo } = useFeatures();
 
   return (
     <div
@@ -33,21 +33,22 @@ export const Sider = ({ callback, isActive }: SiderProps) => {
     >
       <div className={top}>
         <Link className={siderHomeLink} href="/">
-          Home
+          {logo.icon}
+          {logo.title}
         </Link>
         <button className={closeButton} onClick={onClose}>
           <AiOutlineClose />
         </button>
       </div>
       <nav className={navigationMenu}>
-        {navigationItems.map((item, i) => (
+        {features.map((item, i) => (
           <Link
             className={navItem}
             href={item.path}
             key={item.path + `navigationitem:${i}`}
           >
             {item.icon}
-            {item.text}
+            {item.title}
           </Link>
         ))}
       </nav>
