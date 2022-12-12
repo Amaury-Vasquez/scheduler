@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { AiOutlineQuestionCircle, AiFillHome } from 'react-icons/ai';
 
-import styles from 'styles/notFound.module.scss';
+import styles from 'styles/pages/notFound.module.scss';
 
 const { notFoundContent, notFoundInfo, homeButton } = styles;
 
